@@ -26,7 +26,7 @@ public class Estado {
      @Temporal(TemporalType.TIMESTAMP) //informando data e hora
      private Date dataCriacao;
 
-    @Temporal(TemporalType.TIMESTAMP)
+     @Temporal(TemporalType.TIMESTAMP)
      private Date dataAtualizacao;
 
 
