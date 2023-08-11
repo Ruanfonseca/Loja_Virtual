@@ -1,6 +1,5 @@
 package com.loja.backend.entities;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,15 +8,15 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="permissao")
-@AllArgsConstructor
+@Table(name = "produto_imagens")
 @Data
 @NoArgsConstructor
-public class Permissao {
+@AllArgsConstructor
+public class ProdutoImagens {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) //automaticamente
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
     private String nome;
 
@@ -27,4 +26,10 @@ public class Permissao {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataAtualizacao;
 
+    @ManyToOne
+    @JoinColumn(name = "idProduto")
+    private Produto produto;
+
+    @Transient
+    private byte[] arquivo;
 }
