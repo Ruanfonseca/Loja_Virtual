@@ -2,6 +2,7 @@ package com.loja.backend.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -9,7 +10,7 @@ import java.util.Date;
 @Entity
 @Table(name = "permissao_pessoa")
 @Data
-public class PermissaoPessoa implements GrantedAuthority{
+public class PermissaoPessoa implements GrantedAuthority {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -3,6 +3,7 @@ package com.loja.backend.service;
 import com.loja.backend.entities.Pessoa;
 import com.loja.backend.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.text.DateFormat;
